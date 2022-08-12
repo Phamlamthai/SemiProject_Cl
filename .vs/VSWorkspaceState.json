@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\app",
+    "\\app\\Models",
+    "\\database",
+    "\\database\\migrations",
+    "\\resources",
+    "\\resources\\views",
+    "\\resources\\views\\admin",
+    "\\resources\\views\\admin\\bills",
+    "\\resources\\views\\admin\\users"
+  ],
+  "SelectedNode": "\\database\\migrations\\2021_08_02_153613_create_blogs_table.php",
+  "PreviewInSolutionExplorer": false
+}
