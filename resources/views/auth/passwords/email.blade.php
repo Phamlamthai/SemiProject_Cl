@@ -1,6 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
+// create email.blade.php in folder view views/admin/auth/passworld
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
