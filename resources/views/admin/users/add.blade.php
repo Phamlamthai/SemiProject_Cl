@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 @section('title', 'Thêm mới người dùng | Admin - Graphics Tablet')
 @section('content')
+// this is add product
 <div class="single-product-tab-area mg-tb-15">
     <!-- Single pro tab review Start-->
     <div class="single-pro-review-area">
@@ -72,7 +73,7 @@
                                         </div>
                                         <div class="input-group mg-b-pro-edt">
                                             <span class="input-group-addon"><i class="fa fa-unlock-alt" aria-hidden="true"></i></span>
-                                            <input type="password" class="form-control" name="cpassword" placeholder="Xác nhận mật khẩu">
+                                            <input type="password" class="form-control" name="password" placeholder="Xác nhận mật khẩu">
                                         </div>
 
                                         <label>Vai trò</label>
