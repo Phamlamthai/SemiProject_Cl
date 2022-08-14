@@ -26,7 +26,7 @@
 @section('hero')
     <div class="hero__item set-bg" data-setbg="img/banner/hero-4.jpg">
         <div class="hero__text">
-            <a href="#" class="primary-btn">Buy Now</a>
+            <a href="#" class="primary-btn">Buy Now </a>
         </div>
     </div>
 @stop

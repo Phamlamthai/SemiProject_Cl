@@ -40,7 +40,7 @@
 {{--    </style>--}}
 {{--    <body>--}}
 {{--        <div class="header">--}}
-{{--            <h2>Phuong Mai - PC00654</h2>--}}
+{{--            <h2> - PC00654</h2>--}}
 {{--        </div>--}}
 {{--        <div class="content">--}}
 {{--            <div class="sidebar">--}}
@@ -96,29 +96,15 @@ $first_part = $components[1];
 <body>
 <!-- Page Preloder -->
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous"
-        src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=211528757611207&autoLogAppEvents=1"
-        nonce="9PARCdW2"></script>
+    <script async defer crossorigin="anonymous"
+            src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=211528757611207&autoLogAppEvents=1"
+            nonce="9PARCdW2">
+    </script>
 <div id="preloder">
-    <div class="loader"></div>
-</div>
-@if (!empty($message))
-    <div class="modal fade show" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-            <div class="modal-content" style="border:none !important;">
-                <div class="modal-header" style="background-color: #E53935;">
-                    <h5 class="modal-title text-white" id="exampleModalLongTitle">Thông báo</h5>
-                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p class="text-success font-weight-bold">{{ $message }}</p>
-                </div>
-            </div>
-        </div>
+    <div class="loader">
     </div>
-@endif
+</div>
+
 @if (session('status'))
     <div class="modal fade show" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -241,32 +227,7 @@ $first_part = $components[1];
 {{--                                </li>--}}
                             @endif
                         @else
-                            <div class="header__top__right__auth">
-                                <div class="header__top__right__language">
-                                    <div><img src="{{URL::asset('/upload/users/'.Auth::user()->avatar)}}" width="20px" style="margin: 0; border-radius: 50%"> {{ Auth::user()->name }}</div>
-                                    <i class="fa fa-angle-down angle-down-special-language"></i>
-                                    <ul>
-                                        @if((Auth::user()->role) == 1)
-                                            <li>
-                                                <a href="/admin" class="dropdown-item">{{ __('Quản trị') }}</a>
-                                            </li>
-                                        @endif
-                                        <li>
-                                            <a href="/user/profile/<?=Auth::user()->id?>" class="dropdown-item">{{ __('Hồ sơ') }}</a>
-                                        </li>
-                                        <li>
-                                            <a class="dropdown-item" href="{{ route('logout') }}"
-                                               onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                                {{ __('Đăng xuất') }}
-                                            </a>
-                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                                                @csrf
-                                            </form>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
+                            
 {{--                            <li class="nav-item dropdown">--}}
 {{--                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
 {{--                                    {{ Auth::user()->name }}--}}
