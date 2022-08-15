@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 @section('title', 'Chỉnh sửa người dùng | Admin - Graphics Tablet')
 @section('content')
+// make file edit.php in view/admin/user
     <div class="single-product-tab-area mg-tb-15">
         <!-- Single pro tab review Start-->
         <div class="single-pro-review-area">

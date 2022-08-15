@@ -1,6 +1,7 @@
 @extends('layouts.admin')
 @section('title', 'Thêm mới sản phẩm | Admin ')
 @section('content')
+// create product.blade.php in folder view views/admin/products
 <div class="single-product-tab-area mg-tb-15">
     <!-- Single pro tab review Start-->
     <div class="single-pro-review-area">

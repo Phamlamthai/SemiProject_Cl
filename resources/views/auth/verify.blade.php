@@ -1,6 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
+//
+// create verify.blade.php in folder view views/admin/auth
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
