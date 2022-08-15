@@ -15,7 +15,6 @@ use App\Models\Category;
 
 
 Auth::routes();
-
 Route::get('/', 'App\Http\Controllers\HomeController@index');
 Route::get('/home', 'App\Http\Controllers\HomeController@index');
 Route::get('/about', 'App\Http\Controllers\HomeController@about');
@@ -36,6 +35,7 @@ Route::get('/user/profile/{id}', 'App\Http\Controllers\Client\AccountController@
 Route::get('/user/profile/edit/{id}', 'App\Http\Controllers\Client\AccountController@edit');
 Route::get('/user/profile/change-pass/{id}', 'App\Http\Controllers\Client\AccountController@change');
 Route::post('/user/profile/update-pass/{id}', 'App\Http\Controllers\Client\AccountController@changePass');
+
 
 
 Route::group(['middleware' => ['admin']], function () {

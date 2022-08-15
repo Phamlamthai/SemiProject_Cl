@@ -105,6 +105,7 @@
                             <span class="mini-click-non">OverView</span>
                         </a>
                     </li>
+                    {{-- danh sách sản phẩm --}}
                     <li>
                         <a class="has-arrow" href="mailbox.html" aria-expanded="false">
                             <i class="fa big-icon fa-table icon-wrap"></i>
@@ -125,6 +126,7 @@
                             </li>
                         </ul>
                     </li>
+                    {{-- danh sách loai sản phẩm --}}
                     <li>
                         <a class="has-arrow" href="" aria-expanded="false">
                             <i class="fa fa-cubes icon-wrap" aria-hidden="true"></i>
@@ -145,6 +147,7 @@
                             </li>
                         </ul>
                     </li>
+                    {{-- danh sách post sản phẩm --}}
                     <li>
                         <a class="has-arrow" href="" aria-expanded="false">
                             <i class="fa fa-newspaper-o icon-wrap" aria-hidden="true"></i>
@@ -165,6 +168,7 @@
                             </li>
                         </ul>
                     </li>
+                    {{-- danh sách user (add,list) --}}
                     <li>
                         <a class="has-arrow" href="" aria-expanded="false">
                             <i class="fa fa-users icon-wrap" aria-hidden="true"></i>
