@@ -104,7 +104,23 @@ $first_part = $components[1];
     <div class="loader">
     </div>
 </div>
-
+@if (!empty($message))
+    <div class="modal fade show" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content" style="border:none !important;">
+                <div class="modal-header" style="background-color: #E53935;">
+                    <h5 class="modal-title text-white" id="exampleModalLongTitle">Thông báo</h5>
+                    <button type="button" class="close text-white" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-success font-weight-bold">{{ $message }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+@endif
 @if (session('status'))
     <div class="modal fade show" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
@@ -227,7 +243,41 @@ $first_part = $components[1];
 {{--                                </li>--}}
                             @endif
                         @else
-                            
+                        {{-- đây là mục để thay đổi quyền thành admin hay user , nếu role là 1 thì sẽ là admin còn nếu là số khác thì là User --}}
+                            <div class="header__top__right__auth">
+                                <div class="header__top__right__language">
+                                    <div><img src="{{URL::asset('/upload/users/'.Auth::user()->avatar)}}" width="20px" style="margin: 0; border-radius: 50%"> {{ Auth::user()->name }}</div>
+                                    <i class="fa fa-angle-down angle-down-special-language"></i>
+                                    <ul>
+                                        @if((Auth::user()->role) == 1)
+                                            <li>
+                                                <a href="/admin" class="dropdown-item">{{ __('Quản trị') }}</a>
+                                            </li>
+                                        @endif
+                                        <li>
+                                            <a href="/user/profile/<?=Auth::user()->id?>" class="dropdown-item">{{ __('Hồ sơ') }}</a>
+                                        </li>
+                                        <li>
+                                            <a class="dropdown-item" href="{{ route('logout') }}"
+                                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                                {{ __('Đăng xuất') }}
+                                            </a>
+                                            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                                @csrf
+                                            </form>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        {{-- đây là mục để thay đổi quyền thành admin hay user , nếu role là 1 thì sẽ là admin còn nếu là số khác thì là User --}}
+
+
+
+
+
+
+
 {{--                            <li class="nav-item dropdown">--}}
 {{--                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>--}}
 {{--                                    {{ Auth::user()->name }}--}}
@@ -259,6 +309,7 @@ $first_part = $components[1];
                 </div>
             </div>
             <div class="col-lg-6">
+                {{-- đây là header menu bao gồm 5 phần như code --}}
                 <nav class="header__menu">
                     <ul>
                         <li class="<?=(($first_part == '') ? 'active' : '')?>"><a href="/">Home</a></li>
@@ -268,7 +319,10 @@ $first_part = $components[1];
                         <li class="<?=(($first_part == 'contact') ? 'active' : '')?>"><a href="/contact">Contact</a></li>
                     </ul>
                 </nav>
+                {{-- đây là header menu bao gồm 5 phần như code --}}
+
             </div>
+            {{-- đây là code hiển thị giỏ hàng bên cạnh thanh menu navbar bên tay phải và bên trong có thêm code backend được lấy từ cơ sở dữ liệu --}}
             <div class="col-lg-3">
                 <div class="header__cart">
                     <ul style="margin: 0;">
@@ -322,6 +376,8 @@ $first_part = $components[1];
                     </ul>
                 </div>
             </div>
+            {{-- đây là code hiển thị giỏ hàng bên cạnh thanh menu navbar bên tay phải và bên trong có thêm code backend được lấy từ cơ sở dữ liệu --}}
+
         </div>
         <div class="humberger__open">
             <i class="fa fa-bars"></i>
@@ -440,6 +496,7 @@ $first_part = $components[1];
         </div>
     </div>
 </footer>
+<!--footer của trang page bao gồm html và backend-->
 <div class="modal fade show" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content" style="border:none !important;">
@@ -469,6 +526,7 @@ $first_part = $components[1];
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+<!--đoạn mã java script -->
 <script type="text/javascript">
         $(".update-cart").change(function (e) {
             var ele = $(this);
@@ -511,8 +569,10 @@ $first_part = $components[1];
             $('#myModal2').modal('show');
         });
 </script>
+<!--đoạn mã java script -->
 
 
+<!--đoạn mã java script -->
 
 </body>
 <script>(function(d, s, id) {
@@ -524,3 +584,4 @@ $first_part = $components[1];
     }(document, 'script', 'facebook-jssdk'));</script>
 
 </html>
+<!--đoạn mã java script -->

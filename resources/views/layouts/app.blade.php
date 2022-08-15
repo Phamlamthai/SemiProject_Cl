@@ -144,6 +144,7 @@
 <div id="fb-root"></div>
 {{--<script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v11.0&appId=211528757611207&autoLogAppEvents=1" nonce="9hGLXnxy"></script>--}}
 <div class="color-line"></div>
+ {{-- the back to home button what do back home --}}
 <div class="container-fluid">
     <div class="row">
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
