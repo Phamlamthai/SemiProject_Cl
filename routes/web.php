@@ -30,6 +30,11 @@ Route::get('/posts', 'App\Http\Controllers\Client\BlogsController@index');
 Route::get('/post/{id}', 'App\Http\Controllers\Client\BlogsController@showItem');
 
 ///route cart
+Route::get('/cart', 'App\Http\Controllers\Client\CartController@index');
+Route::get('/add-to-cart/{id}', 'App\Http\Controllers\Client\CartController@addToCart');
+Route::post('/update-cart', 'App\Http\Controllers\Client\CartController@update');
+Route::delete('/remove-from-cart', 'App\Http\Controllers\Client\CartController@remove');
+Route::get('/checkout', 'App\Http\Controllers\Client\CartController@checkout');
 
 Route::get('/contact', 'App\Http\Controllers\Client\ContactController@index');
 Route::post('/order', 'App\Http\Controllers\Client\CartController@payment');
