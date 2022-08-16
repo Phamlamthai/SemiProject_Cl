@@ -79,6 +79,7 @@
                             </div>
                         </div>
                     </div>
+                    {{-- Màu sắc bên tay traí  --}}
                     <div class="sidebar__item sidebar__item__color--option">
                         <h4>Màu sắc</h4>
                         <div class="sidebar__item__color sidebar__item__color--white">
@@ -121,6 +122,7 @@
                     <div class="sidebar__item">
                         <div class="latest-product__text">
                             <h4>Sản phẩm mới</h4>
+                            {{-- đoạn code dùng vòng lặp array để hiện thị và code php --}}
                             <?php
                                 $arr = [];  $arr1 = [];  $arr2 = [];
                                 foreach ($new_products as $key=>$item){

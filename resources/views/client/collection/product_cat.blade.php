@@ -57,6 +57,7 @@
                         <div class="sidebar__item">
                             <h4>Loại sản phẩm</h4>
                             <ul>
+                                {{-- vòng lặp foreach để hiển thị toàn bộ sản phẩm thay vì code tay nhiều sp --}}
                                 @foreach($categories as $cate)
                                     <li><a href="/product-cat/<?=$cate->id?>">{{ $cate->name }}</a></li>
                                 @endforeach
@@ -207,10 +208,6 @@
 
                     <div class="product__pagination">
                         {{ $productCat->links() }}
-                        {{--                    <a href="#">1</a>--}}
-                        {{--                    <a href="#">2</a>--}}
-                        {{--                    <a href="#">3</a>--}}
-                        {{--                    <a href="#"><i class="fa fa-long-arrow-right"></i></a>--}}
                     </div>
                 </div>
             </div>
