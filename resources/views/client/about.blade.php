@@ -1,5 +1,5 @@
 @extends('layouts.master')
-@section('title', 'Graphics Tablet - Home')
+@section('title', 'Website_clothes - Home')
 
 @section('client')
     <!-- Breadcrumb Section Begin -->
@@ -20,7 +20,7 @@
     </section>
     <!-- Breadcrumb Section End -->
     <div class="container pt-5">
-        <h2 class="text-danger pb-4">GIỚI THIỆU VỀ GRAPHICS TABLET</h2>
+        <h2 class="text-danger pb-4">GIỚI THIỆU VỀ Website_clothes</h2>
         <div class="node-news-full-body">
             <div class="node-news-full-body-container">
                 {{-- <p><strong>Tên công ty: Công Ty TNHH Đầu Tư và Phát Triển Công Nghệ GT.</strong></p>
