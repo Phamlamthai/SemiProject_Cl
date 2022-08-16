@@ -15,19 +15,22 @@ use App\Models\Category;
 
 
 Auth::routes();
+
+
 Route::get('/', 'App\Http\Controllers\HomeController@index');
 Route::get('/home', 'App\Http\Controllers\HomeController@index');
 Route::get('/about', 'App\Http\Controllers\HomeController@about');
+
+
+
 Route::get('/collection', 'App\Http\Controllers\Client\ProductsController@index');
 Route::get('/product/{id}', 'App\Http\Controllers\Client\ProductsController@showItem');
 Route::get('/product-cat/{id}', 'App\Http\Controllers\Client\ProductsController@productCat');
 Route::get('/posts', 'App\Http\Controllers\Client\BlogsController@index');
 Route::get('/post/{id}', 'App\Http\Controllers\Client\BlogsController@showItem');
-Route::get('/cart', 'App\Http\Controllers\Client\CartController@index');
-Route::get('/add-to-cart/{id}', 'App\Http\Controllers\Client\CartController@addToCart');
-Route::post('/update-cart', 'App\Http\Controllers\Client\CartController@update');
-Route::delete('/remove-from-cart', 'App\Http\Controllers\Client\CartController@remove');
-Route::get('/checkout', 'App\Http\Controllers\Client\CartController@checkout');
+
+///route cart
+
 Route::get('/contact', 'App\Http\Controllers\Client\ContactController@index');
 Route::post('/order', 'App\Http\Controllers\Client\CartController@payment');
 Route::get('/return', 'App\Http\Controllers\Client\CartController@return');
