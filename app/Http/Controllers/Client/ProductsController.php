@@ -24,6 +24,18 @@ class ProductsController extends Controller
         ]);
     }
     ///showIteam
-    
+    public function showItem($id){
+        $categories = new Category();
+        $cate = $categories->all(array('name', 'id'));
+        $product = Product::find($id);
+        $cateName= Category::find($product->catalog_id);
+        $related = Product::where('catalog_id', $product->catalog_id)->take(4)->get();
+        return view('client/collection/product',[
+            'categories'=>$cate,
+            'product'=>$product,
+            'cateName'=>$cateName,
+            'related'=>$related
+        ]);
+    }
     //product cat function
 }
